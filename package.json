@@ -20,6 +20,7 @@
     "package": "yarn build:production && electron-packager ./dist \"AppName\" --arch=x64 --platform=darwin --out=bin --icon=./dist/AppIcon --overwrite"
   },
   "dependencies": {
+    "electron-store": "^5.2.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-redux": "^7.0.3",
@@ -67,6 +68,7 @@
     "style-loader": "^1.2.1",
     "ts-jest": "^25.4.0",
     "ts-loader": "^7.0.5",
+    "tsconfig": "^7.0.0",
     "tsconfig-paths-webpack-plugin": "^3.2.0",
     "typescript": "^3.8.3",
     "webpack": "^4.32.2",

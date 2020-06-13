@@ -46,6 +46,11 @@ function buildConfig(env = {}) {
       extensions: ['*', '.js', '.jsx', '.ts', '.tsx', '.css'],
       mainFields: ['main', 'browser'],
       plugins: [new TsconfigPathsPlugin()],
+      alias: {
+        ...(!isProduction && {
+          'react-dom': '@hot-loader/react-dom',
+        }),
+      },
     },
     // Workaround for ws module trying to resolve web-based dependencies in electron
     externals: ['utf-8-validate', 'bufferutil', 'encoding'],

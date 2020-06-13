@@ -1,1 +1,2 @@
+// Mocked Stylesheet
 module.exports = {};
