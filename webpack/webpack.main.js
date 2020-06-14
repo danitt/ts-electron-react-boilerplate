@@ -1,5 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 
 function buildConfig(env = {}) {
@@ -29,6 +30,7 @@ function buildConfig(env = {}) {
       __filename: false,
     },
     plugins: [
+      new CleanWebpackPlugin(),
       new ForkTsCheckerWebpackPlugin({
         reportFiles: ['src/main.ts'],
       }),
